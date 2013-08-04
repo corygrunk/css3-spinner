@@ -1,0 +1,47 @@
+.spinner {
+   height:40px;
+   width:40px;
+   margin: 0;
+   text-indent: -9999px;
+   position:relative;
+   border:3px solid #eee;
+   border-radius:100%;
+   -webkit-animation: rotation 666ms infinite linear;
+   -moz-animation: rotation 666ms infinite linear;
+   -o-animation: rotation 666ms infinite linear;
+   animation: rotation 666ms infinite linear;
+}
+
+.spinner:before {
+   content:"";
+   display:block;
+   position:absolute;
+   left:-3px;
+   top:-3px;
+   height:100%;
+   width:100%;
+   border-radius:100%;
+   border-width:3px;
+   border-style: solid;
+   border-color: red transparent transparent transparent;
+}
+
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotate(0deg);}
+   to {-webkit-transform: rotate(359deg);}
+}
+
+@-moz-keyframes rotation {
+   from {-moz-transform: rotate(0deg);}
+   to {-moz-transform: rotate(359deg);}
+}
+
+@-o-keyframes rotation {
+   from {-o-transform: rotate(0deg);}
+   to {-o-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+   from {transform: rotate(0deg);}
+   to {transform: rotate(359deg);}
+}
